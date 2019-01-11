@@ -3,8 +3,10 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "concurrently \"ng serve --watch --open\" \"tsc --watch\" \"nodemon dist\\out-tsc\\server\\app.js\" ",
+    "start": "concurrently \"ng serve --watch --open\" \"tsc --watch\" \"nodemon dist\\server\\app.js\" ",
+    "start:prod": "node app.js",
     "build": "ng build && tsc",
+    "build:prod": "ng build --prod && tsc",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -30,6 +32,7 @@
     "mongoose": "^5.4.3",
     "passport": "^0.4.0",
     "rxjs": "~6.3.3",
+    "static-angular": "^1.0.8",
     "zone.js": "~0.8.26"
   },
   "devDependencies": {
